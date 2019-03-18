@@ -33,7 +33,7 @@ namespace Lab04
         protected override void Ol()
         {
             base.Ol();
-            //savaci ölence ne yapılmalı ?
+            //savaci ölünce ne yapılmalı ?
            
         }
     }
