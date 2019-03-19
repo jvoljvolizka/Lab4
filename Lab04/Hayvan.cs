@@ -8,5 +8,9 @@ namespace Lab04
 {
     class Hayvan:Canli
     {
+        public Hayvan()
+        {
+
+        }
     }
 }

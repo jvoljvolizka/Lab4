@@ -12,7 +12,7 @@ namespace Lab04
         private static ArrayList masukiye;
         static void Main(string[] args)
         {
-            /* masukiye = new ArrayList();
+             masukiye = new ArrayList();
              masukiye.Add(new Koylu("Ahmet"));
              masukiye.Add(new Koylu("Mehmet"));
              masukiye.Add(new Hayvan());
@@ -26,7 +26,7 @@ namespace Lab04
              KoyluleriListele();
              SavascilariListele();
              Duelo();
-             */
+             
          
 
         }
@@ -34,13 +34,21 @@ namespace Lab04
         private static void SavascilariListele()
         {
             //Kasabadaki tüm savascilar listesi
+            foreach (Savasci i in masukiye)
+            {
+                Console.WriteLine("{0} " , i.Name);
+            }
             
         }
 
         private static void KoyluleriListele()
         {
+            foreach (Koylu i in masukiye)
+            {
+                Console.WriteLine("{0} ", i.Name);
+            }
             //Kasabadaki tüm köylüler listesi
-           
+
 
         }
 

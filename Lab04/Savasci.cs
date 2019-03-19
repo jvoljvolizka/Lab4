@@ -8,16 +8,25 @@ namespace Lab04
 {
     class Savasci : Canli
     {
-        
+
         private Silah _silah;
         private String name;
+
         private static Savasci[] savascilar = new Savasci[100];
         private static int savasci_adet = 0;
         private static int canli_savasci_adet = 0;
 
+        public string Name { get => name; set => name = value; }
+        public Silah silah { get => _silah; set => _silah = value; }
+        public Savasci[] Savascilar { get => savascilar;}
+        public int Savasci_adet { get => savasci_adet; }
+        public int Canli_savasci_adet { get => canli_savasci_adet; }
+
 
         public Savasci(String name,Silah _silah):base()
         {
+            this.name = name;
+            this._silah = _silah;
             /* ... */
            // savascilar[...] = this;
            /*...*/
@@ -27,6 +36,7 @@ namespace Lab04
 
         public void Saldir(Canli a)
         {
+            a.Hasar(silah.SaldiriGücü);
            //Başka bir caliya saldır. 
         }
 
