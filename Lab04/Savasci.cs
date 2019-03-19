@@ -28,8 +28,9 @@ namespace Lab04
             this.name = name;
             this._silah = _silah;
             /* ... */
-           // savascilar[...] = this;
-           /*...*/
+            savascilar[Savasci_adet] = this;
+            savasci_adet = savasci_adet + 1;
+            canli_savasci_adet = canli_savasci_adet + 1;
         }
        
 
@@ -43,6 +44,7 @@ namespace Lab04
         protected override void Ol()
         {
             base.Ol();
+            canli_savasci_adet = canli_savasci_adet - 1;
             //savaci ölünce ne yapılmalı ?
            
         }

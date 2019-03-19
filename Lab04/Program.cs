@@ -54,9 +54,31 @@ namespace Lab04
 
         private static void Duelo()
         {
+            Savasci yen = null;
+            foreach (Savasci i in masukiye)
+            {
+                yen = i;//listenin son savascisi en yeni savasci
+            }
+
+            while(yen.Canli_savasci_adet < 1)
+            {
+                int x = 0;
+                yen.Saldir(yen.Savascilar[x]);
+
+                if (yen.Savascilar[x].Canlimi)
+                {
+                    yen.Savascilar[x].Saldir(yen);
+                }
+                while (!yen.Canlimi)
+                {
+                    x = x + 1;
+                    yen = yen.Savascilar[x];
+                }
+            }
+
             //Kasabaya yeni gelen bir savasci diğer tüm savascilarla duello başlar taki 1 savasci kalana kadar.
 
-        
+
 
         }
     }
